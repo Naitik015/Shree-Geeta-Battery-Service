@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batttery Service-Shree Geeta Battery Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: url(image/paplate2.jpg) no-repeat center center;
+            background-size: cover;
+        }  
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            max-height: 100px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body onload="init()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="image/logo.png"  class="rounded-circle me-2" style="height: 40px;">
+                <span>Shree Geeta Battery Service</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" >
+                            Shop Batteries
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                            <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                            <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                            Service
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="batteryservice.html">Battery service</a></li>
+                            <li><a class="dropdown-item" href="inverterservice.html">Inverter service</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Register Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="cart.html">
+                            <img src="image/cart.png"  class="cart-icon" style="height: 25px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" >
+                            <img src="image/login.png" class="cart-icon" style="height: 30px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+<!-- Header -->
+<header class="bg-primary text-white text-center py-5">
+    <h1>Powering Your Life with Quality Batteries</h1>
+    <p>Explore Our Wide Range of Batteries for Every Need</p>
+    <a href="#products" class="btn btn-light btn-lg">Shop Now</a>
+</header>
+
+<!-- About Us Section -->
+<section class="container my-5">
+    <h2 class="text-center">Who We Are</h2>
+    <p class="text-center">At Battery Showroom, we are dedicated to providing top-quality batteries for all your needs. With years of experience in the industry, we offer a wide selection of batteries for automotive, industrial, and consumer electronics. Our knowledgeable staff is here to help you find the perfect battery solution.</p>
+</section>
+
+
+<!-- Services Section -->
+<section class="container my-5">
+    <h2 class="text-center">Our Services</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Battery Testing - Free battery testing to ensure your battery is in optimal condition.</li>
+        <li class="list-group-item">Battery Installation - Professional installation services for all types of batteries.</li>
+        <li class="list-group-item">Battery Recycling - Environmentally responsible recycling of old batteries.</li>
+        <li class="list-group-item">Consultation Services - Expert advice on choosing the right battery for your needs.</li>
+    </ul>
+</section>
+<!-- Products Section -->
+<section id="products" class="container my-5">
+    <h2 class="text-center">Our Products</h2>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="image/tata38B20Rpng.png" alt="Four-Wheeler Battery Model 7" class="product-image">
+                <h5 class="card-title">Automotive Batteries</h5>
+                    <p class="card-text">Reliable batteries for cars, trucks, and motorcycles.</p>
+                    <a href="four-wheeler.html" class="btn btn-primary">View Products</a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="image/exideindustrial.png" alt="Four-Wheeler Battery Model 7" class="product-image">
+                <h5 class="card-title">Industrial Batteries</h5>
+                    <p class="card-text">Heavy-duty batteries for industrial applications.</p>
+                    <a href="inverter.html" class="btn btn-primary">View Products</a>
+            </div>
+        </div>
+        
+
+      
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="image/exideXP1500.jpg" class="product-image">
+                <h5 class="card-title">Comercial Vehical battery </h5>
+                    <p class="card-text">Batteries for Truck & all controction machines.</p>
+                    <a href="truck.html" class="btn btn-primary">View Products</a>
+            </div>
+        </div>
+       
+        <div class="col-md-3">
+            <div class="product-card">
+                <img src="image/amaronNT800F51R.jpg" class="product-image">
+                <h5 class="card-title">Junrator battery </h5>
+                    <p class="card-text">Batteries for all type of Junrator machines.</p>
+                    <a href="truck.html" class="btn btn-primary">View Products</a>
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+
+
+
+ 
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left">
+                <h1>About us</h1>
+                <p class="mt-2">24X7 CARE</p>
+                <p>
+                    <strong>98257 59066</strong><br>
+                    <small>(Toll Free Number, India)</small><br>
+                    <a href="savaliyanaitik74@gmail.com" class="text-white">savaliyanaitik74@.com</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Follow Us:</h5>
+                <a href="https://twitter.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/twitter.png"  width="20" height="18">
+                </a>
+                <a href="https://www.linkedin.com/company/amaronofficial/"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/linkedin.png"  width="18" height="18">
+                </a>
+                <a href="https://www.facebook.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/facebook.png"  width="11" height="18">
+                </a>
+                <a href="https://www.instagram.com/amaron.india/" class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/insta.png"  width="18" height="18">
+                </a>
+                <a href="https://www.youtube.com/channel/UCzKkN7529wM58nxoWZGTECA"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Youtube-icon.png"  width="24" height="18">
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p>Want to purchase? <a href="/pitstoplocator" class="text-white">Locate PITSTOP</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">&copy; 2023 Shree Geeta Battery Service. All rights reserved.</p>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Geeta Battery Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="init()">
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="image/logo.png" alt="Logo" class="rounded-circle me-2" style="height: 40px;">
+            <span>Shree Geeta Battery Service</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Shop Batteries
+                    </a>
+                    <ul class="dropdown-menu" >
+                        <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                        <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                        <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                        <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                        <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>
+                    </ul>
+                   
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown" >
+                        Service
+                    </a>
+                    <ul class="dropdown-menu" >
+                        <li><a class="dropdown-item" href="batteryservice.html">Battery service</a></li>
+                        <li><a class="dropdown-item" href="inverterservice.html">Inverter service</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="warranty.html">Register Warranty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="cart.html">
+                        <img src="image/cart.png"   class="cart-icon"  style="height: 25px;"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="login.html">
+                        <img src="image/login.png"   class="cart-icon"  style="height: 30px;"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  
+<div id="carouselExampleIndicators" class="carousel slide mt-5"  data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-50" src="./image/set.png"  height="150px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>High-Performance Batteries</h5>
+                <p>Find the best batteries for your vehicles and inverters.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-50" src="./image/tractor.png" >
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Reliable and Durable</h5>
+                <p>Long-lasting power solutions for agricultural needs.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-50" src="./image/shop.jpg" >
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Visit Our Store</h5>
+                <p>We provide expert advice and customer support.</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+<br>
+<br>
+   
+<h2 class="text-center fade-in" >There's Batteries for Every Need</h2>
+ <div class="container mt-4">
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="two-wheeler.html" class="card text-center card-link">
+                    <img class="img-fluid" src="./image/motorbike.png" >
+                    <h5>Two-Wheeler</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="four-wheeler.html" class="card text-center card-link">
+                    <img class="img-fluid" src="./image/car.png" >
+                    <h5>Four-Wheeler</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 ">
+                <a href="truck.html" class="card text-center card-link">
+                    <img class="img-fluid" src="./image/truck.png" >
+                    <h5>Truck</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="tractor.html" class="card text-center card-link">
+                    <img class="img-fluid" src="./image/tracktor.png" >
+                    <h5>Tractor</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="inverter.html" class="card text-center card-link">
+                    <img class="img-fluid pb-4" src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/2022-07/Invrtor-battery.png" >
+                    <h5 class="pt-5">Inverter Batteries</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="inverter.html" class="card text-center card-link">
+                    <img class="img-fluid" src="./image/inverter.png" >
+                    <h5>Inverter</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+
+<h2 class="text-center fade-in">Offers</h2>
+<div class="container mt-4">
+    <div class="banner">
+        <img src="image/banner.jpg" >
+        <div class="card-container">
+            <div class="row">
+                <!-- Battery Card 1 -->
+                <div class="col-6 mb-3">
+                    <div class="card ">
+                        <img style="height: fit-content;" src="image/setl.jpg" >
+                        
+                    </div>
+                </div>
+                <!-- Battery Card 2 -->
+                <div class="col-6 mb-3">
+                    <div class="card ">
+                        <img  src="image/of.jpg" style="height: fit-content;" >        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<h2 class="text-center fade-in">NEW IN BATTERIES</h2>
+<div class="container mt-4">
+    <div class="banner">
+        <img src="image/banner1.jpg" >
+        <div class="card-containerl">
+            <div class="row">
+                <!-- Battery Card 1 -->
+                <div class="col-6 mb-3">
+                    <div class="card ">
+                        <img  src="image/exideindustrial.png" style="height: fit-content;">
+                        
+                    </div>
+                </div>
+                <!-- Battery Card 2 -->
+                <div class="col-6 mb-3">
+                    <div class="card text-center">
+                        <img  src="image/a-tubalar.png" style="height: fit-content;">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<!-- Location -->
+<h2 class="text-center fade-in">Our Location</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=123+Battery+Lane,+Battery+City">
+                <img src="image/map.png" width="100%" height="450" style="border:0; border-radius: 1%; cursor: pointer;" >
+            </a>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+<br>
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left">
+                <h1>About us</h1>
+                <p class="mt-2">24X7 CARE</p>
+                <p>
+                    <strong>98257 59066</strong><br>
+                    <small>(Toll Free Number, India)</small><br>
+                    <a href="mailto:savaliyanaitik74@gmail.com" class="text-white">savaliyanaitik74@gmail.com</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Follow Us:</h5>
+                <a href="https://twitter.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/twitter.png"  width="20" height="18">
+                </a>
+                <a href="https://www.linkedin.com/company/amaronofficial/"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/linkedin.png"  width="18" height="18">
+                </a>
+                <a href="https://www.facebook.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/facebook.png"  width="11" height="18">
+                </a>
+                <a href="https://www.instagram.com/amaron.india/" class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/insta.png"  width="18" height="18">
+                </a>
+                <a href="https://www.youtube.com/channel/UCzKkN7529wM58nxoWZGTECA"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Youtube-icon.png"  width="24" height="18">
+                </a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p>Want to purchase? 
+                    <a href="/pitstoplocator" class="text-white">Locate PITSTOP</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">&copy; 2023 Shree Geeta Battery Service. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

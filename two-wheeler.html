@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Batteries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+       
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="image/logo.png"  class="rounded-circle me-2" style="height: 40px;">
+                <span>Shree Geeta Battery Service</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" >
+                            Shop Batteries
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                            <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                            <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                            Service
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="batteryservice.html">Battery service</a></li>
+                            <li><a class="dropdown-item" href="inverterservice.html">Inverter service</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Register Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="cart.html">
+                            <img src="image/cart.png"  class="cart-icon" style="height: 25px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" >
+                            <img src="image/login.png" class="cart-icon" style="height: 30px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Shop Batteries</h1>
+        <p class="text-center">Browse through our wide range of batteries from top brands.</p>
+
+        <h2 class="mt-4">Two-Wheeler Batteries</h2>
+        <div class="row">
+            <!-- Two-Wheeler Battery Products -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/exideXLTZ4A.jpg" alt="Two-Wheeler Battery Model 1" class="product-image">
+                    <h5>Exide XL-TZ4A</h5>
+                    <p>Price: 1350</p>
+                    <p>Compact and lightweight battery for motorcycles.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Exide XL-TZ4A ', 'image/exideXLTZ4A.jpg', 'Compact and lightweight battery for motorcycles.', 1350)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/exidetz5.jpg" alt="Two-Wheeler Battery Model 2" class="product-image">
+                    <h5>Exide TZ5A</h5>
+                    <p>Price: 1350</p>
+                    <p>High performance battery with a 2-year warranty.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Exide TZ5A', 'image/exidetz5.jpg', 'High performance battery with a 2-year warranty.', 1350)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/exide5lb.jpg" alt="Two-Wheeler Battery Model 3" class="product-image">
+                    <h5>Exide 5LB</h5>
+                    <p>Price: 1650</p>
+                    <p>Durable battery designed for long performance.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Exide 5LB', 'image/exide5lb.jpg', 'Durable battery designed for long-lastingfor long-lasting performance.', 1650)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/AMARONBTZ4L.jpg" alt="Two-Wheeler Battery Model 4" class="product-image">
+                    <h5>Amaron BTZ4L</h5>
+                    <p>Price: 1200</p>
+                    <p>Lightweight and easy to install battery.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaron BTZ4L', 'image/AMARONBTZ4L.jpg', 'Lightweight and easy to install battery.', 1200)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/amaronbtz5l.png" alt="Two-Wheeler Battery Model 5" class="product-image">
+                    <h5>Amaron BTZ5L</h5>
+                    <p>Price: 1500</p>
+                    <p>Reliable battery with excellent cold cranking amps.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaron BTZ5L', 'image/amaronbtz5l.png', 'Reliable battery with excellent cold cranking amps.', 1500)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/amron5lb.png" alt="Two-Wheeler Battery Model 6" class="product-image">
+                    <h5>Amaron 5LB</h5>
+                    <p>Price: 1600</p>
+                    <p>Compact design for easy handling and installation.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaron 5LB', 'image/amron5lb.png', 'Compact design for easy handling and installation.', 88)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/tataytz4.png" alt="Two-Wheeler Battery Model 7" class="product-image">
+                    <h5>Tata YTZ4</h5>
+                    <p>Price: 1300</p>
+                    <p>High capacity battery for extended use.</p>
+                    <button class="btn btn-primary" onclick="addToCart('TATA YTZ4', 'image/tataytz4.png', 'High capacity battery for extended useor extended use.', 1300)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/tataYTZ5-Battery.png" alt="Two-Wheeler Battery Model 8" class="product-image">
+                    <h5>Tata Ytz5</h5>
+                    <p>Price: 1550</p>
+                    <p>Designed for optimal performance in all conditions.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tata Ytz5', 'image/tataYTZ5-Battery.png', 'Designed for optimal performance in all conditions.', 1550)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/tataYTZ6V.png" alt="Two-Wheeler Battery Model 9" class="product-image">
+                    <h5>Tata Ytz6V </h5>
+                    <p>Price: 1600</p>
+                    <p>Perfect for daily commuting and long rides.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tata Ytz6V', 'image/tataYTZ6V.png', 'Perfect for daily commutingily commuting and long rides.', 1600)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="text-center">
+            <a href="cart.html" class="btn btn-success">Go to Cart</a>
+        </div>
+    </br>
+    </div>
+
+   
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left">
+                <h1>About us</h1>
+                <p class="mt-2">24X7 CARE</p>
+                <p>
+                    <strong>98257 59066</strong><br>
+                    <small>(Toll Free Number, India)</small><br>
+                    <a href="savaliyanaitik74@gmail.com" class="text-white">savaliyanaitik74@.com</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Follow Us:</h5>
+                <a href="https://twitter.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/twitter.png"  width="20" height="18">
+                </a>
+                <a href="https://www.linkedin.com/company/amaronofficial/"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/linkedin.png"  width="18" height="18">
+                </a>
+                <a href="https://www.facebook.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/facebook.png"  width="11" height="18">
+                </a>
+                <a href="https://www.instagram.com/amaron.india/" class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/insta.png"  width="18" height="18">
+                </a>
+                <a href="https://www.youtube.com/channel/UCzKkN7529wM58nxoWZGTECA"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Youtube-icon.png"  width="24" height="18">
+                </a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p>Want to purchase? <a href="/pitstoplocator" class="text-white">Locate PITSTOP</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">&copy; 2023 Shree Geeta Battery Service. All rights reserved.</p>
+
+</footer>
+
+
+
+<script>
+        
+    let cart = [];
+
+    function addToCart(name, image,details,price) {
+        alert(`You have selected ${name} for ${price}.`);
+        // Create a product object
+        const product = { name, image,details,price };
+        // Add product to cart
+        cart.push(product);
+        alert(`${name} has been added to your cart.`);
+        // Store cart in local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+  
+</script>
+</body>
+</html>

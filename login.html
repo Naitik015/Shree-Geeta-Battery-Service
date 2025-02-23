@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Geeta Battery Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <style>
+        .loginContainer {
+            display: flex;
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;      /* Centers vertically */
+            height: 100vh;           /* Full viewport height */
+        }
+        .Login {
+            position: relative;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border: 1px solid #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        .navbar, .footer {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+            padding: 20px 0; /* Padding for both navbar and footer */
+            position: relative; /* Positioning for both */
+            width: 100%; /* Full width */
+        }
+
+        .navbar .navbar-brand, .footer-text {
+            color: #000; /* Black text color */
+            text-decoration: brown;
+        }
+
+        .navbar .nav-link, .footer-links a {
+            color: #000; /* Black text color for links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .navbar .nav-link:hover, .footer-links a:hover {
+            color: #ffd700; /* Change color on hover */
+        }
+
+        .footer-links {
+            padding: 0; /* Remove default padding */
+            margin: 10px 0 0; /* Margin for spacing */
+            list-style: none; /* Remove bullet points */
+        }
+
+        .footer-links li {
+            display: inline; /* Display links inline */
+            margin: 0 10px; /* Spacing between links */
+        }
+ </style>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            // Password requirements
+            const passwordRequirements = {
+                minLength: 8,
+                hasUpperCase: /[A-Z]/.test(password),
+                hasLowerCase: /[a-z]/.test(password),
+                hasNumbers: /\d/.test(password),
+                hasSpecialChars: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+            };
+
+            // Check if username and password are provided
+            if (!username || !password) {
+                alert('Please fill in all fields.');
+                return false; // Prevent form submission
+            }
+
+            // Check if password meets requirements
+            if (password.length < passwordRequirements.minLength) {
+                alert('Password must be at least 8 characters long.');
+                return false; // Prevent form submission
+            } else if (!passwordRequirements.hasUpperCase) {
+                alert('Password must contain at least one uppercase letter.');
+                return false; // Prevent form submission
+            } else if (!passwordRequirements.hasLowerCase) {
+                alert('Password must contain at least one lowercase letter.');
+                return false; // Prevent form submission
+            } else if (!passwordRequirements.hasNumbers) {
+                alert('Password must contain at least one number.');
+                return false; // Prevent form submission
+            } else if (!passwordRequirements.hasSpecialChars) {
+                alert('Password must contain at least one special character.');
+                return false; // Prevent form submission
+            }
+
+            alert('Login successful!'); // Replace with actual login logic
+            window.location.href = 'index.html'; 
+            return false; // Prevent form submission for demonstration
+        }
+    </script>
+</head>
+<body style="background-image: url('image/track.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="image/logo.png" alt="Shree Geeta Battery Service Logo" class="rounded-circle me-2" style="height: 40px;">
+                <span>Shree Geeta Battery Service</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="shopBatteriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop Batteries
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="shopBatteriesDropdown">
+                            <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                            <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                            <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="serviceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Service
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+                            <li><a class="dropdown-item" href="batteryservice.html">Battery Service</a></li>
+                            <li><a class="dropdown-item" href="inverterservice.html">Inverter Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Register Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html" aria-label="Shopping Cart">
+                            <img src="image/cart.png" class="cart-icon" alt="Shopping Cart" style="height: 25px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" aria-label="User  Login">
+                            <img src="image/loginb.png" class="cart-icon" alt="User  Login" style="height: 30px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+<br>
+    <div class="loginContainer" onsubmit="return validateLogin();">
+        <div class="Login">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-floating mb-3">
+                    <input type="text" id="username" class="form-control" placeholder="User  Name" required>
+                    <label>User Name</label>
+                </div>
+                <br>
+
+                <div class="form-floating">
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    <label>Password</label>
+                </div>
+                <br>
+
+                <button type="submit" class="btn btn-block btn-primary" style="margin-left: 40%;">Login</button>
+                <br>
+                <br>
+
+                <div class="links">
+                    <a href="#">Forget Password</a> |
+                    <a href="#">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+<footer class="footer bg-transparent">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <p class="footer-text">© 2023 Shree Geeta Battery Service. All rights reserved.</p>
+                <ul class="footer-links list-inline">
+                    <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="terms.html">Terms of Service</a></li>
+                    <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Batteries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+       
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            height: 420px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+        
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="image/logo.png"  class="rounded-circle me-2" style="height: 40px;">
+                <span>Shree Geeta Battery Service</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" >
+                            Shop Batteries
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                            <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                            <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                            Service
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="batteryservice.html">Battery service</a></li>
+                            <li><a class="dropdown-item" href="inverterservice.html">Inverter service</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Register Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="cart.html">
+                            <img src="image/cart.png"  class="cart-icon" style="height: 25px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" >
+                            <img src="image/login.png" class="cart-icon" style="height: 30px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    
+    <div class="container mt-5">
+        <h1 class="text-center">Shop Inverters</h1>
+        <p class="text-center">Explore our range of high-quality inverters from trusted brands.</p>
+    
+        <h2 class="mt-4">Inverters & Inverter Battery</h2>
+        <div class="row">
+            <!-- Inverter Products -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/inverter_model1.jpg" alt="Inverter Model 1" class="product-image">
+                    <h5>Liminous Eco Volt Neo 1050</h5>
+                    <p>Price: 7000</p>
+                    <p>Compact inverter with 1000v output, ideal for home use.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Liminous Eco Volt Neo 1050', 'image/inverter_model1.jpg', 'Compact inverter with 1000W output, ideal for home use.', 7000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/inverter_model2.jpg" alt="Inverter Model 2" class="product-image">
+                    <h5>Liminous Eco Volt Neo 1650</h5>
+                    <p>Price: 11000</p>
+                    <p>High-efficiency inverter with 1500W output and LCD display.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Liminous Eco Volt Neo 1650', 'image/inverter_model2.jpg', 'High-efficiency inverter with 1650W output and LCD display.', 11000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/luminous Eco Watt neo 2300.png" alt="Inverter Model 3" class="product-image">
+                    <h5>Luminous Eco Watt neo 2300</h5>
+                    <p>Price: 20000</p>
+                    <p>Powerful inverter with 2300W output, perfect for larger appliances.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Luminous Eco Watt neo 2300', 'image/luminous Eco Watt neo 2300.png', 'Powerful inverter with 2300W output, perfect for larger appliances.', 20000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/luminous Eco Volt Neo 1250 .png" alt="Inverter Model 4" class="product-image">
+                    <h5>Luminous Eco Volt Neo 1250</h5>
+                    <p>Price: 9000</p>
+                    <p>Lightweight inverter with 1250W output, easy to transport.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Luminous Eco Volt Neo 1250', 'image/luminous Eco Volt Neo 1250 .png', 'Lightweight inverter with 1250W output, easy to transport.', 9000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/amaze-aq-1275-plus-2.jpg" alt="Inverter Model 5" class="product-image">
+                    <h5>Amaze-aq-1275-plus-2</h5>
+                    <p>Price: 8000</p>
+                    <p>Durable inverter with 1275W output, suitable for outdoor use.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaze-aq-1275-plus-2', 'image/amaze-aq-1275-plus-2.jpg', 'Durable inverter with 1275W output, suitable for outdoor use.', 8000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/Amaze 3875.jpg" alt="Inverter Model 6" class="product-image">
+                    <h5>Amaze 3875+</h5>
+                    <p>Price:25000 </p>
+                    <p>Advanced inverter with 3875W output and smart technology.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaze 3875+', 'image/Amaze 3875.jpg', 'Advanced inverter with 3875W output and smart technology.', 25000)">Buy Now</button>
+                </div>
+            </div>
+           
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/Amaze 4500+.jpg" alt="Inverter Model 7" class="product-image">
+                    <h5> Amaze 4500+</h5>
+                    <p>Price: 32000</p>
+                    <p>High-capacity inverter with 4500W output for heavy-duty applications.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaze 4500+', 'image/Amaze 4500+.jpg', 'High-capacity inverter with 4500W output for heavy-duty applications.', 32000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/Amaze 1075plu.jpg" alt="Inverter Model 8" class="product-image">
+                    <h5>Amaze 1075+</h5>
+                    <p>Price: 6500</p>
+                    <p>Compact design with 1075W output, perfect for small devices.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Amaze 1075+', 'image/Amaze 1075plu.jpg', 'Compact design with 1075W output, perfect for small devices.', 6500)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/luminous Eco Volt Neo 850 .png" alt="Inverter Model 9" class="product-image">
+                    <h5>Liminous Eco Volt Neo 850</h5>
+                    <p>Price: 5500</p>
+                    <p>Reliable inverter with 850W output, ideal for home backup.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Liminous Eco Volt Neo 800', 'image/luminous Eco Volt Neo 850 .png', 'Reliable inverter with 1500W output, ideal for home backup.', 5500)">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/exideindustrial.png"  class="product-image">
+                    <h5>Exide 150Ah Battery</h5>
+                    <p>Price: 19,000</p>
+                    <p>High-performance battery with 150Ah capacity, ideal for long backup.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Exide 150Ah Battery', 'image/exideindustrial.png', 'High-performance battery with 150Ah capacity, ideal for long backup.', 19000)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/luminous150ah.png" alt="Luminous 200Ah Battery" class="product-image">
+                    <h5>Luminous 200Ah Battery</h5>
+                    <p>Price: 15,500</p>
+                    <p>Durable battery with 200Ah capacity, perfect for heavy usage.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Luminous 200Ah Battery', 'image/luminous150ah.png', 'Durable battery with 200Ah capacity, perfect for heavy usage.', 15500)">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="image/tata150ah.jpg"  class="product-image">
+                    <h5>Tata 150Ah Battery</h5>
+                    <p>Price: 16000</p>
+                    <p>Reliable battery with 150Ah capacity, suitable for home and office use.</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tata  150Ah Battery', 'image/tata150ah.jpg', 'Reliable battery with 150Ah capacity, suitable for home and office use.', 16000)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      
+        <div class="text-center">
+            <a href="cart.html" class="btn btn-success">Go to Cart</a>
+        </div>
+    </br>
+    </div>
+
+   
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left">
+                <h1>About us</h1>
+                <p class="mt-2">24X7 CARE</p>
+                <p>
+                    <strong>98257 59066</strong><br>
+                    <small>(Toll Free Number, India)</small><br>
+                    <a href="savaliyanaitik74@gmail.com" class="text-white">savaliyanaitik74@.com</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Follow Us:</h5>
+                <a href="https://twitter.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/twitter.png"  width="20" height="18">
+                </a>
+                <a href="https://www.linkedin.com/company/amaronofficial/"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/linkedin.png"  width="18" height="18">
+                </a>
+                <a href="https://www.facebook.com/amaronofficial"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/facebook.png"  width="11" height="18">
+                </a>
+                <a href="https://www.instagram.com/amaron.india/" class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/insta.png"  width="18" height="18">
+                </a>
+                <a href="https://www.youtube.com/channel/UCzKkN7529wM58nxoWZGTECA"  class="text-white mx-2">
+                    <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Youtube-icon.png"  width="24" height="18">
+                </a>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p>Want to purchase? <a href="/pitstoplocator" class="text-white">Locate PITSTOP</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">&copy; 2023 Shree Geeta Battery Service. All rights reserved.</p>
+
+</footer>
+
+
+    <script>
+        
+        let cart = [];
+
+        function addToCart(name, image,details,price) {
+            alert(`You have selected ${name} for ${price}.`);
+            // Create a product object
+            const product = { name, image,details,price };
+            // Add product to cart
+            cart.push(product);
+            alert(`${name} has been added to your cart.`);
+            // Store cart in local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+       
+        .cart-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+       
+        #totalAmount {
+            font-weight: bold;
+            font-size: 24px; 
+            margin-top: 20px;
+            text-align: right; 
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="image/logo.png"  class="rounded-circle me-2" style="height: 40px;">
+                <span>Shree Geeta Battery Service</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" >
+                            Shop Batteries
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="two-wheeler.html">Two Wheeler</a></li>
+                            <li><a class="dropdown-item" href="four-wheeler.html">Four Wheeler</a></li>
+                            <li><a class="dropdown-item" href="tractor.html">Tractor</a></li>
+                            <li><a class="dropdown-item" href="truck.html">Truck</a></li>
+                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                            Service
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="batteryservice.html">Battery service</a></li>
+                            <li><a class="dropdown-item" href="inverterservice.html">Inverter service</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Register Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="cart.html">
+                            <img src="image/cart.png"  class="cart-icon" style="height: 25px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" >
+                            <img src="image/login.png" class="cart-icon" style="height: 30px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Shopping Cart</h1>
+        <div id="cartItems"></div>
+        <div id="totalAmount"></div>
+
+        <h2 class="mt-4">Customer Details</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label >Full Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label >Email Address</label>
+                <input type="email" class="form-control"  required>
+            </div>
+            <div class="form-group">
+                <label >Shipping Address</label>
+                <textarea class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label >Payment Method</label>
+                <select class="form-control"  required>
+                    <option value="">Select Payment Method</option>
+                    <option value="CASE ON DELIVERY">CASH ON DELIVERY</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Proceed to Payment</button>
+        </form>
+    </div>
+
+   <br>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1>About us</h1>
+                    <p class="mt-2">24X7 CARE</p>
+                    <p>
+                        <strong>98257 59066</strong><br>
+                        <small>(Toll Free Number, India)</small><br>
+                        <a href="savaliyanaitik74@gmail.com" class="text-white">savaliyanaitik74@.com</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h5>Follow Us:</h5>
+                    <a href="https://twitter.com/amaronofficial"  class="text-white mx-2">
+                        <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/twitter.png"  width="20" height="18">
+                    </a>
+                    <a href="https://www.linkedin.com/company/amaronofficial/"  class="text-white mx-2">
+                        <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/linkedin.png"  width="18" height="18">
+                    </a>
+                    <a href="https://www.facebook.com/amaronofficial"  class="text-white mx-2">
+                        <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/facebook.png"  width="11" height="18">
+                    </a>
+                    <a href="https://www.instagram.com/amaron.india/" class="text-white mx-2">
+                        <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/insta.png"  width="18" height="18">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCzKkN7529wM58nxoWZGTECA"  class="text-white mx-2">
+                        <img src="https://amaron-prod-images.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Youtube-icon.png"  width="24" height="18">
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p>Want to purchase? 
+                        <a href="#" class="text-white">Locate PITSTOP</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">&copy; 2023 Shree Geeta Battery Service. All rights reserved.</p>
+    
+    </footer>
+
+    <script>
+        // Load cart items from local storage
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var cartItemsContainer = document.getElementById('cartItems');
+        var totalAmountContainer = document.getElementById('totalAmount');
+    
+        // Function to display cart items and total amount
+        function displayCart() {
+            cartItemsContainer.innerHTML = '';
+            var totalAmount = 0;
+    
+            if (cart.length == 0) {
+                totalAmountContainer.innerHTML = 'Your cart is empty.';
+                return; // Exit the function if the cart is empty
+            }
+    
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                var cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <h5>${item.name}</h5>
+                    <p>Price: ${item.price}</p>
+                    <p>Details: ${item.details}</p>
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid mb-2" style="max-height: 100px;">
+                    <button class="btn btn-danger" onclick="removeFromCart('${item.name}')">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+                totalAmount += item.price; 
+            }
+    
+            totalAmountContainer.innerHTML = `Total Amount: ${totalAmount.toFixed(2)}`;
+        }
+    
+        displayCart();
+    
+        function removeFromCart(name) {
+            var updatedCart = [];
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].name !== name) {
+                    updatedCart.push(cart[i]);
+                }
+            }
+            cart = updatedCart; // Update the cart variable
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart(); // Update the cart display without reloading the page
+        }
+    
+        document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your order! Your details have been submitted.');
+        });
+    </script>
+</body>
+</html>
